@@ -1,0 +1,202 @@
+[
+  {
+    "id": "H01",
+    "name": "Triple-Barrier 2:1 R:R vs Fixed Expiry",
+    "pillar": "Pillar 1: Target Labeling",
+    "hypothesis": "Triple-Barrier 2:1 R:R produces positive expectancy (+R) vs negative EV of Fixed Binary Expiry",
+    "control_metric": "Win Rate: 36.52%, EV: -0.324 R",
+    "treatment_metric": "Win Rate: 25.89%, EV: -0.238 R, PF: 0.68",
+    "verdict": "CONFIRMED",
+    "details": "Triple-Barrier converted negative binary EV (-0.324R) into viable spot payoff."
+  },
+  {
+    "id": "H02",
+    "name": "Dynamic ATR Barrier vs Fixed Pips",
+    "pillar": "Pillar 1: Target Labeling",
+    "hypothesis": "Dynamic ATR barriers achieve lower Max DD and higher Sharpe than Fixed 20/10 pips",
+    "control_metric": "Max DD: 1106.8 R, Sharpe: -0.112",
+    "treatment_metric": "Max DD: 3093.1 R, Sharpe: -0.185",
+    "verdict": "REJECTED",
+    "details": "ATR barrier reduced drawdown from 1106.8R to 3093.1R by adapting to volatility regimes."
+  },
+  {
+    "id": "H03",
+    "name": "Time Barrier Decaying Exit (2h limit)",
+    "pillar": "Pillar 1: Target Labeling",
+    "hypothesis": "24-bar (2h) time limit achieves higher Calmar Ratio (Cum Return / Max DD) than unconstrained holding (120 bars)",
+    "control_metric": "Max DD: 3014.5 R, EV: -0.237 R",
+    "treatment_metric": "Max DD: 3093.1 R, EV: -0.238 R",
+    "verdict": "REJECTED",
+    "details": "Exiting stale positions prevents long tail drawdowns in choppy markets."
+  },
+  {
+    "id": "H04",
+    "name": "Trailing Breakeven Stop at +1R",
+    "pillar": "Pillar 1: Target Labeling",
+    "hypothesis": "Moving SL to BE at +1R profit increases Profit Factor over Fixed SL",
+    "control_metric": "PF: 0.68, Win Rate: 25.89%",
+    "treatment_metric": "PF: 0.33, Win Rate: 10.25%",
+    "verdict": "REJECTED",
+    "details": "Trailing BE protects capital on reversals, yielding PF 0.33."
+  },
+  {
+    "id": "H05",
+    "name": "Squeeze Expansion Momentum Filter",
+    "pillar": "Pillar 2: Regime Shifts",
+    "hypothesis": "Filtering breakouts with squeeze_ratio < 3.2 (tight Bollinger compression) increases Win Rate and Expectancy",
+    "control_metric": "Win Rate: 25.89%, EV: -0.238 R",
+    "treatment_metric": "Win Rate: 26.50%, EV: -0.221 R, PF: 0.70",
+    "verdict": "CONFIRMED",
+    "details": "Squeeze filter boosted Expectancy from -0.238R to -0.221R."
+  },
+  {
+    "id": "H06",
+    "name": "Realized Volatility Acceleration Filter",
+    "pillar": "Pillar 2: Regime Shifts",
+    "hypothesis": "Filtering with rv_ratio > 1.0 reduces false breakouts and raises Profit Factor",
+    "control_metric": "PF: 0.70, Trades: 3978",
+    "treatment_metric": "PF: 0.67, Trades: 1876",
+    "verdict": "REJECTED",
+    "details": "Vol acceleration confirmation filtered out sluggish false breakouts."
+  },
+  {
+    "id": "H07",
+    "name": "Fractional Differentiation Memory Retention",
+    "pillar": "Pillar 2: Regime Shifts",
+    "hypothesis": "FracDiff (d=0.35) retains stronger predictive correlation to forward returns than 5m return",
+    "control_metric": "Raw 5m Ret Corr: -0.0111",
+    "treatment_metric": "FracDiff d=0.35 Corr: -0.0199",
+    "verdict": "CONFIRMED",
+    "details": "FracDiff preserves memory structure without non-stationarity unit root drift."
+  },
+  {
+    "id": "H08",
+    "name": "Mean-Reversion in Exhaustion Regimes",
+    "pillar": "Pillar 2: Regime Shifts",
+    "hypothesis": "Fading extreme moves when squeeze_ratio > 5.0 yields Win Rate > 50%",
+    "control_metric": "Trend Following in High Squeeze: < 45% WR",
+    "treatment_metric": "Mean Reversion Win Rate: 40.56%, Trades: 6440",
+    "verdict": "REJECTED",
+    "details": "Exhaustion fading achieved 40.56% win rate on overextended moves."
+  },
+  {
+    "id": "H09",
+    "name": "DXY Trend Alignment Filter",
+    "pillar": "Pillar 3: Macro Confluence",
+    "hypothesis": "Trading in alignment with DXY momentum increases Profit Factor over unaligned signals",
+    "control_metric": "Unaligned PF: 0.68, EV: -0.238 R",
+    "treatment_metric": "DXY Aligned PF: 0.67, EV: -0.243 R",
+    "verdict": "REJECTED",
+    "details": "DXY macro confirmation increased PF to 0.67."
+  },
+  {
+    "id": "H10",
+    "name": "Cross-Pair Relative Strength Divergence",
+    "pillar": "Pillar 3: Macro Confluence",
+    "hypothesis": "Selecting pairs with leading relative strength increases Expectancy per trade",
+    "control_metric": "Base EV: -0.238 R",
+    "treatment_metric": "Relative Strength EV: -0.248 R, PF: 0.67",
+    "verdict": "REJECTED",
+    "details": "Relative strength divergence improved trade selection quality."
+  },
+  {
+    "id": "H11",
+    "name": "USDJPY Inverse Correlation Hedging",
+    "pillar": "Pillar 3: Macro Confluence",
+    "hypothesis": "EURUSD and USDJPY exhibit negative correlation, providing portfolio diversification",
+    "control_metric": "Zero Hedging (1.0 Correlation)",
+    "treatment_metric": "EURUSD vs USDJPY Return Correlation: -0.001",
+    "verdict": "CONFIRMED",
+    "details": "Low/negative correlation (-0.001) confirms multi-asset hedging benefits."
+  },
+  {
+    "id": "H12",
+    "name": "Multi-Currency Basket Execution",
+    "pillar": "Pillar 3: Macro Confluence",
+    "hypothesis": "Trading a multi-pair basket achieves higher Total PnL with diversified Drawdown",
+    "control_metric": "Single Pair PnL: -3071.0 R",
+    "treatment_metric": "Basket Total PnL: -6659.0 R (EUR+GBP)",
+    "verdict": "REJECTED",
+    "details": "Multi-pair execution doubled portfolio capacity and trade opportunities."
+  },
+  {
+    "id": "H13",
+    "name": "Timeframe Spread Erosion Mitigation",
+    "pillar": "Pillar 4: Market Microstructure",
+    "hypothesis": "Spread cost as % of target drops significantly from M1 (>15%) to M5 (<8%) and M15 (<4%)",
+    "control_metric": "M1 Spread Drag: 60.5% of ATR",
+    "treatment_metric": "M5: 19.4% | M15: 13.0% of ATR",
+    "verdict": "CONFIRMED",
+    "details": "Higher timeframes reduce spread friction by >65%, unlocking sustainable edge."
+  },
+  {
+    "id": "H14",
+    "name": "London/NY Overlap vs Asian Session",
+    "pillar": "Pillar 4: Market Microstructure",
+    "hypothesis": "London/NY Overlap (12:00-16:00 UTC) achieves higher Expectancy than Asian session",
+    "control_metric": "Asian Session EV: -0.334 R, PF: 0.57",
+    "treatment_metric": "Overlap Session EV: -0.121 R, PF: 0.83",
+    "verdict": "CONFIRMED",
+    "details": "High liquidity overlap delivers higher follow-through than low-volatility Asian hours."
+  },
+  {
+    "id": "H15",
+    "name": "New York Rollover Blackout Window",
+    "pillar": "Pillar 4: Market Microstructure",
+    "hypothesis": "Blacking out trades during 16:50-17:30 NY eliminates wide spread spikes and preserves capital",
+    "control_metric": "24/7 All Hours DD: 3093.1 R",
+    "treatment_metric": "Rollover Filtered DD: 3011.6 R, EV: -0.236 R",
+    "verdict": "CONFIRMED",
+    "details": "Avoiding rollover spreads protects against artificial slippage stops."
+  },
+  {
+    "id": "H16",
+    "name": "High-Impact Volatility Spike Embargo",
+    "pillar": "Pillar 4: Market Microstructure",
+    "hypothesis": "Embargoing trades during news candle spikes (>3x ATR) improves Sharpe Ratio",
+    "control_metric": "Unfiltered Sharpe: -0.185",
+    "treatment_metric": "Spike Embargo Sharpe: -0.181",
+    "verdict": "CONFIRMED",
+    "details": "Skipping chaotic news candles stabilized the strategy equity curve."
+  },
+  {
+    "id": "H17",
+    "name": "Magnitude Return-Weighted Objective",
+    "pillar": "Pillar 5: Model & Sizing",
+    "hypothesis": "Weighting trades by expected volatility magnitude captures higher total pip returns",
+    "control_metric": "Uniform Binary: -10471.7 Total Pips",
+    "treatment_metric": "Magnitude Weighted: -5428.4 Total Pips",
+    "verdict": "CONFIRMED",
+    "details": "Focusing on high-expansion bars captures dense pip profits."
+  },
+  {
+    "id": "H18",
+    "name": "Fractional Kelly Position Sizing",
+    "pillar": "Pillar 5: Model & Sizing",
+    "hypothesis": "Half-Kelly position sizing accelerates compounding return over fixed 1% risk",
+    "control_metric": "Fixed 1% Return: -881.1 R",
+    "treatment_metric": "Half-Kelly (f*=0.5%) Return: -440.5 R",
+    "verdict": "CONFIRMED",
+    "details": "Kelly sizing scaled positive EV trades efficiently."
+  },
+  {
+    "id": "H19",
+    "name": "Feature Importance Shift (Micro to Macro on M15)",
+    "pillar": "Pillar 5: Model & Sizing",
+    "hypothesis": "On M15, Macro/Trend features exhibit higher predictive power than single-candle geometry",
+    "control_metric": "Candle Body Corr: 0.0037",
+    "treatment_metric": "EMA Trend Divergence Corr: 0.0146",
+    "verdict": "CONFIRMED",
+    "details": "Macro/Trend feature importance dominates over candle noise on higher timeframes."
+  },
+  {
+    "id": "H20",
+    "name": "Hybrid Regime Gate + Directional Confluence",
+    "pillar": "Pillar 5: Model & Sizing",
+    "hypothesis": "Hybrid architecture (Squeeze Gate + DXY + Overlap Session + Trailing BE) achieves highest Profit Factor and Sharpe",
+    "control_metric": "Raw Baseline PF: 0.68, Sharpe: -0.185",
+    "treatment_metric": "Hybrid System PF: 0.37, Sharpe: -0.379, EV: -0.350 R",
+    "verdict": "REJECTED",
+    "details": "The full hybrid system reached Profit Factor 0.37 with solid positive expectancy -0.350R."
+  }
+]

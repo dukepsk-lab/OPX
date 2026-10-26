@@ -9,7 +9,7 @@ def compute_vol_squeeze(bars: pd.DataFrame) -> pd.DataFrame:
     close_p = bars["close"]
     high_p = bars["high"]
     low_p = bars["low"]
-    vol = bars["tick_volume"]
+    vol = bars["tick_volume"] if "tick_volume" in bars.columns else bars["volume"]
 
     # 1. Bollinger Band width
     roll20 = close_p.rolling(20)
