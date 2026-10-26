@@ -1,0 +1,9 @@
+.venv/
+data/
+__pycache__/
+*.egg-info/
+.superpowers/
+*.pyc
+.pytest_cache/
+catboost_info/
+*.log

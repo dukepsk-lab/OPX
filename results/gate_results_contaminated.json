@@ -1,0 +1,200 @@
+[
+  {
+    "pair": "EURUSD",
+    "k": 15,
+    "n_bars": 4402320,
+    "start_date": "2014-12-31 17:00:00+00:00",
+    "end_date": "2026-10-23 20:59:00+00:00",
+    "slip": 2e-05,
+    "r": 0.85,
+    "primary_buffer": 0.02,
+    "checks": {
+      "lcb_vs_breakeven": true,
+      "dsr": true,
+      "pbo": true,
+      "permutation": true,
+      "payout_stress": true,
+      "lag_stress": true,
+      "calibration": true,
+      "quarters": true
+    },
+    "details": {
+      "lcb_vs_breakeven": 0.5583216180624528,
+      "dsr": 0.9998486727116029,
+      "pbo": 0.004662004662004662,
+      "permutation": 0.0004997501249375312,
+      "payout_stress": 0.00276606250689726,
+      "lag_stress": 0.5510737141292547,
+      "calibration": 0.010528481426092196,
+      "quarters": 0.8571428571428571
+    },
+    "go": true,
+    "verdict": "GO",
+    "elapsed_s": 1353.4
+  },
+  {
+    "pair": "EURUSD",
+    "k": 5,
+    "n_bars": 4402320,
+    "start_date": "2014-12-31 17:00:00+00:00",
+    "end_date": "2026-10-23 20:59:00+00:00",
+    "slip": 2e-05,
+    "r": 0.85,
+    "primary_buffer": 0.02,
+    "checks": {
+      "lcb_vs_breakeven": true,
+      "dsr": true,
+      "pbo": true,
+      "permutation": true,
+      "payout_stress": false,
+      "lag_stress": false,
+      "calibration": true,
+      "quarters": true
+    },
+    "details": {
+      "lcb_vs_breakeven": 0.5514355018112475,
+      "dsr": 0.9790653417573595,
+      "pbo": 0.002641802641802642,
+      "permutation": 0.0004997501249375312,
+      "payout_stress": -0.0041200537443081275,
+      "lag_stress": 0.5356513918775958,
+      "calibration": 0.01910886592134431,
+      "quarters": 0.7619047619047619
+    },
+    "go": false,
+    "verdict": "NO-GO",
+    "elapsed_s": 1372.5
+  },
+  {
+    "pair": "GBPUSD",
+    "k": 1,
+    "n_bars": 4403281,
+    "start_date": "2014-12-31 17:00:00+00:00",
+    "end_date": "2026-10-23 20:59:00+00:00",
+    "slip": 2e-05,
+    "r": 0.85,
+    "primary_buffer": 0.02,
+    "checks": {
+      "lcb_vs_breakeven": true,
+      "dsr": false,
+      "pbo": true,
+      "permutation": true,
+      "payout_stress": false,
+      "lag_stress": false,
+      "calibration": false,
+      "quarters": false
+    },
+    "details": {
+      "lcb_vs_breakeven": 0.5459297166502526,
+      "dsr": 0.5835723232073967,
+      "pbo": 0.10334110334110334,
+      "permutation": 0.0004997501249375312,
+      "payout_stress": -0.009625838905302997,
+      "lag_stress": 0.5359365139759986,
+      "calibration": 0.026184638037699548,
+      "quarters": 0.6153846153846154
+    },
+    "go": false,
+    "verdict": "NO-GO",
+    "elapsed_s": 1389.1
+  },
+  {
+    "pair": "GBPUSD",
+    "k": 5,
+    "n_bars": 4403281,
+    "start_date": "2014-12-31 17:00:00+00:00",
+    "end_date": "2026-10-23 20:59:00+00:00",
+    "slip": 2e-05,
+    "r": 0.85,
+    "primary_buffer": 0.02,
+    "checks": {
+      "lcb_vs_breakeven": true,
+      "dsr": true,
+      "pbo": false,
+      "permutation": true,
+      "payout_stress": true,
+      "lag_stress": true,
+      "calibration": true,
+      "quarters": true
+    },
+    "details": {
+      "lcb_vs_breakeven": 0.5595183499072315,
+      "dsr": 0.9999913871974165,
+      "pbo": 0.21825951825951825,
+      "permutation": 0.0004997501249375312,
+      "payout_stress": 0.003962794351675902,
+      "lag_stress": 0.5565854813450001,
+      "calibration": 0.009994742812857615,
+      "quarters": 0.8571428571428571
+    },
+    "go": false,
+    "verdict": "NO-GO",
+    "elapsed_s": 1373.5
+  },
+  {
+    "pair": "GBPUSD",
+    "k": 15,
+    "n_bars": 4403281,
+    "start_date": "2014-12-31 17:00:00+00:00",
+    "end_date": "2026-10-23 20:59:00+00:00",
+    "slip": 2e-05,
+    "r": 0.85,
+    "primary_buffer": 0.02,
+    "checks": {
+      "lcb_vs_breakeven": true,
+      "dsr": true,
+      "pbo": true,
+      "permutation": true,
+      "payout_stress": true,
+      "lag_stress": true,
+      "calibration": true,
+      "quarters": true
+    },
+    "details": {
+      "lcb_vs_breakeven": 0.5820748703238158,
+      "dsr": 1.0,
+      "pbo": 0.011344211344211345,
+      "permutation": 0.0004997501249375312,
+      "payout_stress": 0.026519314768260194,
+      "lag_stress": 0.5818267997995515,
+      "calibration": 0.009430390122679433,
+      "quarters": 0.9285714285714286
+    },
+    "go": true,
+    "verdict": "GO",
+    "elapsed_s": 1363.3
+  },
+  {
+    "pair": "USDJPY",
+    "k": 1,
+    "n_bars": 4401135,
+    "start_date": "2014-12-31 17:00:00+00:00",
+    "end_date": "2026-10-23 20:59:00+00:00",
+    "slip": 0.002,
+    "r": 0.85,
+    "primary_buffer": 0.02,
+    "checks": {
+      "lcb_vs_breakeven": false,
+      "dsr": false,
+      "pbo": false,
+      "permutation": true,
+      "payout_stress": false,
+      "lag_stress": false,
+      "calibration": false,
+      "quarters": false
+    },
+    "details": {
+      "lcb_vs_breakeven": 0.5387251244907384,
+      "dsr": 0.16011723119811988,
+      "pbo": 0.3076923076923077,
+      "permutation": 0.0004997501249375312,
+      "payout_stress": -0.016830431064817186,
+      "lag_stress": 0.5273385695775104,
+      "calibration": 0.023513422810857665,
+      "quarters": 0.5277777777777778
+    },
+    "go": false,
+    "verdict": "NO-GO",
+    "elapsed_s": 1399.7
+  }
+]

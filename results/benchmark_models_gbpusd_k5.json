@@ -1,0 +1,46 @@
+{
+  "lightgbm": {
+    "best_buffer": 0.0,
+    "n_trades": 348,
+    "win_rate": 0.49712643678160917,
+    "lcb": 0.4532330042796357,
+    "breakeven": 0.5405405405405405,
+    "ev": -0.08031609195402306,
+    "dsr": 0.0038385666439104344,
+    "pbo": 0.5552447552447553,
+    "duration_sec": 74.3
+  },
+  "xgboost": {
+    "best_buffer": 0.0,
+    "n_trades": 376,
+    "win_rate": 0.4734042553191489,
+    "lcb": 0.43139201295187235,
+    "breakeven": 0.5405405405405405,
+    "ev": -0.12420212765957456,
+    "dsr": 0.0001436091628316902,
+    "pbo": 0.887024087024087,
+    "duration_sec": 91.4
+  },
+  "catboost": {
+    "best_buffer": 0.0,
+    "n_trades": 0,
+    "win_rate": 0.0,
+    "lcb": 0.0,
+    "breakeven": 0.5405405405405405,
+    "ev": -1.0,
+    "dsr": 0.0,
+    "pbo": 1.0,
+    "duration_sec": 532.1
+  },
+  "cnn_lstm": {
+    "best_buffer": 0.0,
+    "n_trades": 0,
+    "win_rate": 0.0,
+    "lcb": 0.0,
+    "breakeven": 0.5405405405405405,
+    "ev": -1.0,
+    "dsr": 0.0,
+    "pbo": 1.0,
+    "duration_sec": 1304.6
+  }
+}
